@@ -1,0 +1,17 @@
+Class is template using which instances called object are created.
+Thus, class is an idea, while an object is a working version of that idea that is created and stored in memory at runtime.
+
+The properties/attributes defined inside a class but outside any method, are called instance variables.
+
+The "new" keyword allocates memory at runtime to create an object and returns its memory address.
+So, the reference stores the address of the object, not the object itself.
+
+A constructor is a special function in a class which has the same name as class, that runs automatically when an object is created. It sets up the object with initial values.
+
+Keyword "this" is used inside a class to refer to the current object. It accesses that object's variables and methods.
+
+Constructor overloading is defining multiple constructors in the same class with different parameter lists. The right one is picked and is based on the arguments passed during object creation.
+
+Constructor chaining is calling one constructor from another
+
+Keyword "final" is used to make something unchangeable. It can be applied to variables, methods, and classes to stop them from being modified.
