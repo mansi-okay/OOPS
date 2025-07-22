@@ -6,9 +6,11 @@ public class object_ref {
 
         Student student2 = student1;
 
+        System.out.println(student2.name);
+
         student1.name = "New name";
 
-        System.out.println(student2.name); 
+        System.out.println(student2.name);
     }
 }
 

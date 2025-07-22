@@ -1,0 +1,61 @@
+Inheritance
+A subclass inherits (or has access to) the properties and methods of a superclass and can also define its own unique
+ properties and methods.
+Subclass has access to all properties except private ones.
+"private" prevents direct access to variables from outside the class,but it does not prevent from passing
+ values as arguments to a constructor or method, even if that constructor sets private fields internally.
+
+In Java, when a subclass object is assigned to a superclass reference variable, you can only access the members defined
+ in the superclass because the reference type determines what is accessible at compile time, not the actual object type.
+
+You can't assign a superclass object to a subclass reference, because the superclass doesn't know about the subclass's
+ properties or methods, so they can't be initialized or accessed, making the assignment unsafe.
+
+Keyword "super" refers to the immediate (direct) superclass of the current class.
+If no superclass is explicitly defined, super refers to the Object class, which is the top-most class in Java.
+Super is used to initialize the methods and properties of the superclass
+
+When you pass a subclass object to a superclass constructor using super(), the constructor can only see the variables
+ from the superclass, not the extra ones in the subclass. Any additional subclass-specific members must be initialized
+ separately within the subclass constructor.
+
+Single inheritance is when one class extends another class.
+Multilevel inheritance is when a chain of inheritance forms.
+
+Multiple inheritance is when a class extends more than one classes. Java does not support it.
+
+Hierarchical inheritance is inherited by many classes.
+
+Hybrid inheritance is a combination of single and multiple inheritance. Java does not support.
+
+To prevent a class from being inherited declare it as final. And when a class is declared final its methods become
+ final too.
+
+
+Polymorphism
+It means many ways to represent a single entity or item.
+
+Compile time/Static polymorphism is achieved via method overloading.
+ Method overloading is a feature in Java where multiple methods in the same class can have the same name but different
+  parameter lists (type, number, or order of parameters).
+
+Runtime/Dynamic polymorphism is achieved via method overriding.
+Method Overriding occurs when a subclass provides a specific implementation of a method that is already defined in its
+ superclass.
+If reference is of superclass type and object is of subclass type and both have a method with same name. The subclass
+ determines what methods can be accessed and the subclass determines which version of method to run, this is
+ upcasting.
+The determination of the version of method to accessed is done during runtime using Dynamic Method Dispatch and is
+ dependent on the type of object that is created.
+Final methods can't be overridden.
+Overriding depends on object and static methods do not depend on objects. Hence, static methods can't be overridden but
+ inherited.
+Overriding does not apply to instance variables.
+
+
+Encapsulation
+Hiding the internal data of an object and allowing access only through methods.
+
+Abstraction
+Hiding complex implementation and showing only essential features.
+

@@ -1,0 +1,23 @@
+A package is a folder. You can't have two public classes with the same name in it. 
+But normal classes with the same name are allowed in different files.
+
+A static variable belongs to the class itself, not to any specific object and is common to all of the objects.
+Static variables are apart from instance variables.
+By convention when accessing static variable, access using the class name
+Both variable and method can be declared static.
+It can be accessed before any object is created and without the reference variable.
+
+Example is main() which is static, runs without an object of main being created.
+A static method can't access non-static stuff because it doesn't know which object to refer to.
+So if we want to access a non static method in static method we need to access by referencing the instance.
+
+"this" keyword can't be used in static methods as it related to object
+
+A static block runs only once when the class is first loaded (not every time an object is created).
+
+Only nested classes can be static
+Objects are created at runtime, hence static stuff are resolved during compile time.
+
+Single class is a type of class for which only one object can be created
+
+When you set a class name as the return type, it means the method will return an object of that class (or more accurately, a reference to that object).
