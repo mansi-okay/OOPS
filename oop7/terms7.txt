@@ -1,0 +1,35 @@
+Collections framework
+Collection interface defines a set of reusable behaviors that are common to multiple data structures,
+allowing consistency and flexibility across the Java Collections Framework.
+
+ArrayList is not synchronized
+Multiple threads can access and modify the ArrayList at the same time.
+This can cause problems, like two threads trying to add elements at once or
+ one thread reading while another modifies the list.
+These situations cause inconsistent data, exceptions, or data corruption.
+It is faster.
+
+Vector is synchronized
+Every method (like add() or remove()) is thread-safe by default.
+That means if one thread is using add(), others must wait.
+No two threads can simultaneously modify the vector.
+
+Enum(Enumeration)
+
+Enum are special data types that let you define a fixed set of constant values.
+Enum constants are implicitly public static final.
+
+We can’t create enum objects explicitly and hence we can’t invoke enum constructor directly.
+enum can contain constructor, and it is executed separately for each enum constant at the time
+of enum class loading.
+That's why constructors for all enum constants run, even if you access only one.
+
+And the constructor cannot be the public or protected it must have private or default modifiers.
+Why? if we create public or protected, it will allow initializing more than one objects.
+
+values() method can be used to return all values present inside enum.
+Order is important in enums.By using ordinal() method, each enum constant index can be found,
+just like array index.
+valueOf() method returns the enum constant of the specified string value, if exists.
+
+Enum can contain concrete methods only i.e. no any abstract method.

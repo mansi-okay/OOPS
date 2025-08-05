@@ -1,0 +1,18 @@
+Access modifiers
+
+            │ Class │ Package │ Subclass │ Subclass │ World
+            │       │         │(same pkg)│(diff pkg)│(diff pkg & not subclass)
+────────────┼───────┼─────────┼──────────┼──────────┼──────────────────────────
+public      │   +   │    +    │    +     │     +    │   +
+────────────┼───────┼─────────┼──────────┼──────────┼──────────────────────────
+protected   │   +   │    +    │    +     │     +    │
+────────────┼───────┼─────────┼──────────┼──────────┼──────────────────────────
+no modifier │   +   │    +    │    +     │          │
+────────────┼───────┼─────────┼──────────┼──────────┼──────────────────────────
+private     │   +   │         │          │          │
+
+
+When accessing in subclass, it is meant to access within the subclass itself and not outside it
+Protected data can be accessed via Subclass and even the subclass of the subclass
+
+Every class in java extends Object class by default

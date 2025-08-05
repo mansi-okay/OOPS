@@ -6,14 +6,15 @@ public class Singleton {
         System.out.println("Singleton object created!");
     }
 
+    //declaring ref variable of type Singleton
     private static Singleton instance;
 
-    // public method to provide access to the instance we created
+    // public method to provide access to private ref variable instance we created
     public static Singleton getInstance(){
-        if (instance == null){
-            instance = new Singleton();
+        if (Singleton.instance == null){
+            Singleton.instance = new Singleton();
         }
-        return instance;
+        return Singleton.instance;
     }
 
     public void log(String message){

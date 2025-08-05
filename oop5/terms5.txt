@@ -1,0 +1,46 @@
+Abstract Classes
+An abstract method is a method without a body which means that it has no implementation.
+ It is meant to be overridden in a subclass.
+
+If a class contains one or more abstract methods it should be declared abstract.
+Abstract classes can have instance variables and constructors.
+
+Abstract classes cannot have objects directly because they may contain incomplete (unimplemented) methods.
+Creating an object of such a class would imply creating something with undefined behavior.
+
+Constructors cannot be abstract because abstract methods are meant to be overridden in subclasses,
+ while constructors are not inherited and cannot be overridden as each class defines its own constructors.
+
+Abstract classes can have static as well as normal methods and they work like usual.
+The normal methods can be overridden as well.
+
+
+Interface
+Interfaces allows multiple inheritance and similar to class but can't have objects.
+
+Methods in interfaces are "public abstract" by default.
+
+Variables are "public static final" by default. So they must be initialised.
+
+Abstract classes and interfaces in Java both follow the same principle.
+ They define what a class must do, but not necessarily how.
+
+If a class implements multiple interfaces with methods of the same name (only declared, not defined),
+ no conflict occurs. One implementation satisfies all.
+
+Interfaces enable polymorphism across unrelated classes, avoiding rigid inheritance structures.
+With interfaces, classes that have no common superclass (unrelated classes)
+ can still share behavior and be treated polymorphically.
+A class can only extend one superclass (single inheritance).
+ So if you design behavior through inheritance, you're locked into a single structure.
+  This often leads to deep, brittle hierarchies.
+
+When overriding a method, the access modifier must be the same or less restrictive.
+ You cannot use a more restrictive access modifier than the method in the superclass or interface.
+
+Interfaces to interface inheritance we use "extends" and linking interface to classes we use "implements"
+
+Annotations in Java are a form of interface, marked with the @interface keyword.
+
+Interfaces cannot have normal method bodies like classes do.
+ To include a method with a body in an interface, you must use the default or static keyword.

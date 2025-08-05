@@ -1,0 +1,29 @@
+Generics
+Generics allow you to write code that works with any data type while providing compile-time type safety.
+So generics is a way to write reusable classes, interfaces, and methods that work with different types,
+ without rewriting the same logic.
+
+In Java, type parameters cannot be directly instantiated because of a concept called type erasure.
+ You cannot use "new T[]" directly because Java doesn't retain generic type info at runtime.
+ It just treats T like an object. So it can't know what kind of array to create.
+
+A generic interface in Java is an interface that uses type parameters (generics) so that the same interface
+ can work with different data types, providing type safety and reusability.
+
+Lambda function
+((parameters) -> Body)
+
+Exceptions are conditions that a program can handle using try-catch block.
+Throwable class handles exceptions and errors.
+Checked exceptions checked at compile-time and Unchecked exception at runtime.
+More specific exceptions must come before more general ones in a multi-catch block.
+ Otherwise, causes compile-time error.
+
+Cloning
+Shallow copy:
+Primitive fields (int, float, boolean) are copied by value.
+Reference fields (objects, arrays, collections) are copied by reference, meaning,
+ the new object will point to the same instances as the original for non-primitives.
+Copying by constructor chaining follows the same behaviour.
+Deep copy:
+This creates the copy of the new object instead of pointing to the old one.
